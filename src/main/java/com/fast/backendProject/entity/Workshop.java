@@ -23,7 +23,7 @@ public class Workshop {
     private Integer id;
 
     @Column(unique = true)
-    @NonNull
+    @NotNull
     private String name;
 
 }
