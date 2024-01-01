@@ -4,6 +4,7 @@ import com.fast.backendProject.entity.Workshop;
 import com.fast.backendProject.repository.WorkshopRepository;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RequestMapping("/api/workshops")
@@ -17,12 +18,12 @@ public class WorkshopController {
     }
 
     @GetMapping
-    public List<Workshop> Get() {
+    public List<Workshop> getAllWorkshops() {
         return _workshopRepository.findAll();
     }
 
     @PostMapping
-    public Workshop Post(@RequestBody Workshop workshop) {
+    public Workshop saveWorkshop(@Valid @RequestBody Workshop workshop) {
         return _workshopRepository.save(workshop);
     }
 }

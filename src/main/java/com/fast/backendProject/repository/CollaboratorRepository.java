@@ -1,10 +1,9 @@
 package com.fast.backendProject.repository;
 
-import com.fast.backendProject.entity.Workshop;
+import com.fast.backendProject.entity.Collaborator;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
-public interface WorkshopRepository extends JpaRepository<Workshop, Integer> {
+public interface CollaboratorRepository extends JpaRepository<Collaborator, Integer> {
 }
